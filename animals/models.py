@@ -33,7 +33,7 @@ class Caretaker(models.Model):
     matiral_status = models.CharField(max_length=15, choices=matiral_status_choice)
 
     def __str__(self):
-        return self.name
+        return self.name_is
 
 
 # Veterinarian
@@ -92,4 +92,4 @@ class Pet(models.Model):
     veterinrian = models.ForeignKey(Veterinarian, on_delete=models.CASCADE)
 
     def __str__(self):
-        return self.name
+        return self.pseudonym

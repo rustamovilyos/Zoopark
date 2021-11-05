@@ -15,12 +15,34 @@ table, th, td {
 <table style="width:100%">
   <tr>
     <td>
-        {% for pets in object_list %}
+        Pets
+    </td>
+    <td>
+        Caretaker
+    </td>
+    <td>
+        Veterinarian
+    </td>
+  </tr>
+    <tr>
+    <td>
+        {% for pets in pet %}
         <p>Имя: {{ pets.pseudonym }}</p>
+        <p>{{pets.caretaker}}</p>
+        <hr>
         {% endfor %}
     </td>
-    <td>Tobias</td>
-    <td>Linus</td>
+    <td>
+        {% for caretaker in care %}
+        <p>Имя: {{ caretaker.name_is }}</p>
+        <p>{{caretaker.gender}}</p>
+        {% endfor %}
+    </td>
+    <td>
+        {% for vet in vet %}
+        <p>Имя: {{ vet.name }}</p>
+        {% endfor %}
+    </td>
   </tr>
 </table>
 
